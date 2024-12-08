@@ -1,0 +1,56 @@
+.headerWrapper{
+    display: flex;
+    gap: 40%;
+}
+.Logo{
+    margin-top: 10px;
+}
+.Logo a{
+    display: flex;
+}
+.Logo a h2{
+    margin-top: 12%;
+    background: linear-gradient(
+        to right, #ffffff 0%,#ff7d41 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.headerRight{
+    display: flex;
+    gap: 250px;
+    margin-top: 2%;
+}
+.navigationMenu{
+    display: flex;
+    gap: 100px; 
+    font-size: 22px;
+}
+.navigationMenu a{
+    text-shadow: 2px 2px 3px #000;
+}
+.navigationMenu a:hover{
+    text-shadow: 2px 2px 3px #ff7d41;
+}
+.aramaCubugu{
+    color: #ffffff;
+    cursor: pointer;
+}
+
+@media(max-width: 900px) {
+    .navigationMenu{
+        display: none;
+    }
+    .aramaCubugu{
+        margin-top: 100%;
+    }
+}
+
+@media (max-width: 1400px){
+    .navigationMenu a{
+        margin-top: 30px;
+    }
+    .navigationMenu{
+        gap: 75px;
+    }
+}

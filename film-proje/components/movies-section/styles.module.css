@@ -1,0 +1,158 @@
+.movieSection {
+    margin-top: 14%;
+}
+
+.myFavorites {
+    margin-bottom: 10px;
+}
+
+.myFavorites h2 {
+    font-size: 36px;
+}
+
+.myFavoritesFilmGroup {
+    display: flex;
+    gap: 50px;
+    margin-top: 50px;
+    flex-wrap: wrap; /* Ekle: Daha küçük ekranlarda filmleri alt alta yerleştir */
+}
+
+.movie img {
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.5s;
+    object-fit: cover;
+}
+
+.movieInfoOverlay {
+    opacity: 0;
+}
+
+.innerBox {
+    font-size: 15px;
+    max-width: 200px;
+}
+
+.movie:hover .movieInfoOverlay {
+    position: absolute;
+    margin-top: -400px;
+    width: 280px;
+    height: 400px;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 0px 15px #ff7d41;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    opacity: 1;
+}
+
+.movie img:hover {
+    margin-top: -25px;
+    box-shadow: 0px 0px 15px #ff7d41;
+}
+
+.moreText {
+    margin-top: 15%;
+    font-size: 22px;
+    text-align: center;
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+.moreText:hover {
+    color: #ff7d41;
+    text-decoration: underline;
+}
+
+.topSection {
+    display: flex;
+    justify-content: space-between; /* Ekle: Elemanlar arasındaki boşluğu ayarla */
+    align-items: center; /* Ekle: Elemanları dikeyde ortala */
+}
+
+/* Medya Sorguları */
+@media (max-width: 1250px) {
+    .topSection {
+        flex-direction: column; /* Daha küçük ekranlarda üst bölümdeki elemanları dikey hizala */
+        gap: 10px; /* Boşlukları azalt */
+    }
+
+    .moreText {
+        margin-top: 10px;
+        font-size: 18px;
+    }
+
+    .myFavorites h2 {
+        font-size: 30px;
+        margin-top: 100px;
+    }
+
+    .myFavoritesFilmGroup {
+        gap: 30px; /* Daha küçük ekranlarda filmler arasındaki boşluğu azalt */
+    }
+
+    .movie img {
+        width: 200px; /* Daha küçük ekranlar için film posterinin genişliğini azalt */
+        height: 280px;
+    }
+
+    .movie:hover .movieInfoOverlay {
+        width: 200px;
+        height: 280px;
+        margin-top: -280px;
+    }
+}
+
+@media (max-width: 768px) {
+    .movieSection {
+        margin-top: 10%;
+    }
+
+    .myFavorites h2 {
+        font-size: 26px;
+    }
+
+    .myFavoritesFilmGroup {
+        flex-direction: column; /* Mobil cihazlarda filmleri alt alta yerleştir */
+        gap: 20px;
+    }
+
+    .movie img {
+        width: 150px;
+        height: 210px;
+    }
+
+    .movie:hover .movieInfoOverlay {
+        width: 150px;
+        height: 210px;
+    }
+
+    .moreText {
+        font-size: 16px;
+        margin-top: 5%;
+    }
+}
+
+@media (max-width: 480px) {
+    .myFavorites h2 {
+        font-size: 22px;
+    }
+
+    .movie img {
+        width: 120px;
+        height: 168px;
+    }
+
+    .movie:hover .movieInfoOverlay {
+        width: 120px;
+        height: 168px;
+        margin-top: -169px;
+    }
+
+    .moreText {
+        font-size: 14px;
+    }
+}
